@@ -206,6 +206,7 @@ export default function Page() {
             <div className="md:col-span-8 space-y-3">
               <h3 className="text-lg font-semibold">개요</h3>
               <p className="text-slate-700">브랜드 홍보용 웹사이트 신규 구축</p>
+              <h4 className="mt-4 text-sm font-semibold text-slate-500">구현 기능</h4>
               <ul className="mt-2 list-disc pl-5 space-y-2 text-slate-700">
                 <li><span className="font-semibold">Vue 3 기반 SPA</span>로 초기 렌더 비용 약 <span className="font-semibold">25%</span> 절감</li>
                 <li>관리자 <span className="font-semibold">CRUD</span> 변경이 사용자 화면에 자연 반영되도록 동기 구조 개선</li>
@@ -232,7 +233,7 @@ export default function Page() {
             <div className="md:col-span-8 space-y-3">
               <h3 className="text-lg font-semibold">개요</h3>
               <p className="text-slate-700">고객사 서비스 유지보수 및 <span className="font-semibold">성능 최적화</span></p>
-              <h4 className="mt-4 text-sm font-semibold text-slate-500">팀 내 역할</h4>
+              <h4 className="mt-4 text-sm font-semibold text-slate-500">구현 기능</h4>
               <ul className="mt-2 list-disc pl-5 space-y-2 text-slate-700">
                 <li>요구 기반 개선·신규 기능 지속 제공, 주요 장애 감소</li>
                 <li>관리자 데이터 관리 기능 정비로 운영 생산성 향상</li>
