@@ -47,12 +47,13 @@ export default function Page() {
               <h1 className="text-3xl font-extrabold tracking-tight">유재환</h1>
               <p className="mt-1 text-slate-600">웹개발자 · 풀스택</p>
               <p className="mt-1 text-sm text-slate-500">
-                서울, 대한민국 ·{" "}
                 <a
                   href="mailto:yyho6623@gmail.com"
                   className="underline decoration-brand-500 decoration-2 underline-offset-2"
                 >
-                  yyho6623@gmail.com
+                  <span className="inline-flex items-center gap-1"> {/* 아이콘 추가를 위한 flex */}
+                    ✉️ yyho6623@gmail.com
+                  </span>
                 </a>
               </p>
             </div>
@@ -131,7 +132,7 @@ export default function Page() {
         <h2 className="text-xl font-bold">Project</h2>
 
         {/* 아이템 간 구분선만 사용 */}
-        <div className="mt-6 divide-y divide-slate-200">
+        <div className="mt-6 space-y-6 border-l-2 border-slate-200 pl-6">
           {/* 1) 엘루오씨앤씨 / PMR */}
           <article className="py-8 md:grid md:grid-cols-12 md:gap-8 md:items-start">
             <div className="md:col-span-4 space-y-3">
