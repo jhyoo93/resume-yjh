@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 카드 공통 */
+.card { @apply rounded-3xl; }
+
+/* 칩/배지 (현재 마크업에 맞춤) */
+.chip { @apply inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-soft; }
+.dark .chip { @apply border-slate-700 bg-slate-900 text-slate-100; }
+
+.badge { @apply inline-flex items-center rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-soft; }
+.dark .badge { @apply border-slate-700 bg-slate-900 text-slate-100; }
+
+.link { @apply underline decoration-brand-500 decoration-2 underline-offset-2 hover:text-brand-700; }
+
+/* 인쇄 최적화 */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff !important; }
+  .card { box-shadow: none !important; }
+  a[href]:after { content: '' !important; }
+}
