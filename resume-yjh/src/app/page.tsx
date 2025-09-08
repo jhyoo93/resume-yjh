@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useEffect } from "react";
@@ -40,25 +41,28 @@ export default function Page() {
       <header className="card relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div className="flex items-center gap-5">
-            <div className="grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-2xl font-extrabold text-white shadow-soft">
-              YJH
+            {/* image */}
+            <div className="flex-shrink-0">
+              <img
+                src="/image/yoo.jpeg" // 실제 이미지 경로로 변경하세요.
+                alt="유재환 프로필 사진"
+                className="w-30 h-40 object-cover rounded-lg md:w-49 md:h-60"
+              />
             </div>
-            <div>
-              <h1 className="text-3xl font-extrabold tracking-tight">유재환</h1>
-              <p className="mt-1 text-slate-600">웹개발자 · 풀스택</p>
-              <p className="mt-1 text-sm text-slate-500">
-                <a
-                  href="mailto:yyho6623@gmail.com"
-                  className="underline decoration-brand-500 decoration-2 underline-offset-2"
-                >
-                  <span className="inline-flex items-center gap-1"> {/* 아이콘 추가를 위한 flex */}
-                    ✉️ yyho6623@gmail.com
-                  </span>
-                </a>
+            <div className="flex flex-col justify-center space-y-2 md:space-y-3"> {/* 텍스트 블록 내부 수직 정렬 및 간격 조정 */}
+              <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">유재환</h1> {/* 이름 크기 */}
+              <p className="text-lg font-medium text-slate-600 dark:text-slate-400">웹개발자 · 풀스택</p> {/* 직무 크기 */}
+              {/* 이메일 및 전화번호 정보 (수정된 코드 적용) */}
+              <br />
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                Tel. 010.2065.9321
               </p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                Email. yyho6623@gmail.com               
+              </p>             
             </div>
           </div>
-          <div className="no-print flex flex-wrap gap-2">
+          {/* <div className="no-print flex flex-wrap gap-2">
             <a
               href="https://github.com/jhyoo93"
               className="rounded-xl border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50"
@@ -67,7 +71,7 @@ export default function Page() {
             >
               GitHub
             </a>
-          </div>
+          </div> */}
         </div>
 
         <br />
@@ -82,7 +86,12 @@ export default function Page() {
           중복 코드를 <strong>20% 이상 제거</strong>하고, 모듈화로 가독성과 재사용성을 <strong>50% 이상 향상</strong>
           시켰습니다. 또한, <strong>성능 최적화</strong> 작업을 통해 평균 응답 속도를{" "}
           <strong>1.2초에서 0.7초로 단축</strong>하여 시스템 안정성을 크게 개선했습니다. 아울러 Git, Jira 등의 협업 도구를
-          활용해 효율적인 팀워크와 개발 프로세스를 경험했습니다.
+          활용해 효율적인 팀워크와 개발 프로세스를 경험했습니다.<br />
+          <br />
+          이러한 경험을 바탕으로 개발자로서 역량을 확장하고자 iOS 앱 개발 부트캠프에 참여하며 학습 중이며,
+          동시에 Vue.js와 JPA를 깊이 있게 학습하며 기술적 깊이와 범위를 넓혀가고 있습니다.
+          <br />
+
         </p>
       </header>
 
@@ -208,10 +217,19 @@ export default function Page() {
               <p className="text-slate-700">브랜드 홍보용 웹사이트 신규 구축</p>
               <h4 className="mt-4 text-sm font-semibold text-slate-500">구현 기능</h4>
               <ul className="mt-2 list-disc pl-5 space-y-2 text-slate-700">
-                <li><span className="font-semibold">Vue 3 기반 SPA</span>로 초기 렌더 비용 약 <span className="font-semibold">25%</span> 절감</li>
-                <li>관리자 <span className="font-semibold">CRUD</span> 변경이 사용자 화면에 자연 반영되도록 동기 구조 개선</li>
+                <li>
+                  <span className="font-semibold">Vue 3 기반 SPA</span>로 개발하여 초기 렌더링 성능을 약 <span className="font-semibold">25%</span> 개선하였으며,
+                  <br />
+                  <strong>Composition API</strong>를 활용한 모듈화로 코드 가독성 및 재사용성을 향상
+                </li>
+                <li>
+                  <span className="font-semibold">Vuex</span>를 활용하여 전역 상태 관리의 복잡성을 해소하고,
+                  관리자 <span className="font-semibold">CRUD</span> 변경 사항이 사용자 화면에 실시간으로 반영되도록 반응형 데이터 구조 설계
+                </li>
+                <li>
+                  <strong>Vue Router</strong>를 통한 페이지 네비게이션 최적화 및 <span className="font-semibold">Lazy Loading</span> 적용으로 초기 로딩 성능을 추가적으로 확보했습니다.
+                </li>
                 <li><span className="font-semibold">Spring + MyBatis</span> REST API 설계/구현 및 배포 파이프라인 고도화</li>
-                <li>핵심지표 개선: <span className="font-semibold">LCP 3.25s → 1.9s</span>, CLS 안정화</li>
               </ul>
             </div>
           </article>
@@ -273,6 +291,34 @@ export default function Page() {
           </ul>
         </div>
       </section>
+
+      {/* Link */}
+      {/* <section
+        id="experience"
+        className="mt-10 card rounded-3xl border border-slate-200 bg-white p-8 shadow-soft"
+      >
+
+      <h2 className="text-xl font-bold">Education</h2>
+        <div className="mt-6 space-y-6 border-l-2 border-slate-200 pl-6">
+          <ul className="mt-4 space-y-3 text-slate-700">
+            <li>
+              <div className="flex items-center justify-between">
+                <span className="font-semibold">JAVA 웹프로그래밍[과정평가형]</span>
+                <span className="text-sm text-slate-500">2021.12 – 2022.06</span>
+              </div>
+              <p className="text-sm text-slate-600">Java, Spring, MyBatis, JavaScript</p>
+            </li>
+            <li>
+              <div className="flex items-center justify-between">
+                <span className="font-semibold">ESTsoft Frontier iOS Bootcamp (3기)</span>
+                <span className="text-sm text-slate-500">2025.06 – 진행중</span>
+              </div>
+              <p className="text-sm text-slate-600">Swift, UIKit, SwiftUI, CoreData</p>
+            </li>
+          </ul>
+        </div>  
+
+      </section> */}
 
       {/* Footer */}
       <footer className="mt-10 flex items-center justify-between text-sm text-slate-500">
