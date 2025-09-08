@@ -209,8 +209,8 @@ export default function Page() {
               <div className="text-sm text-slate-500">콜러키친</div>
               <div className="font-semibold">23.12 – 24.02</div>
               <div className="flex flex-wrap gap-2">
-                <span className="badge">Vue.js</span>
                 <span className="badge">Spring FrameWork</span>
+                <span className="badge">Vue.js</span>            
                 <span className="badge">Node.js</span>
                 <span className="badge">MySQL</span>
                 <span className="badge">Mybatis</span>
@@ -245,6 +245,7 @@ export default function Page() {
               <div className="font-semibold">22.08 – 25.02</div>
               <div className="flex flex-wrap gap-2">
                 <span className="badge">Spring FrameWork</span>
+                <span className="badge">Vue.js</span>
                 <span className="badge">Node.js</span>
                 <span className="badge">JQuery</span>
                 <span className="badge">JavaScript</span>
@@ -257,6 +258,7 @@ export default function Page() {
               <p className="text-slate-700">고객사 서비스 유지보수 및 <span className="font-semibold">성능 최적화</span></p>
               <h4 className="mt-4 text-sm font-semibold text-slate-500">구현 기능</h4>
               <ul className="mt-2 list-disc pl-5 space-y-2 text-slate-700">
+                <li>Vue기반 프론트 페이지 유지보수</li>
                 <li>요구 기반 개선·신규 기능 지속 제공, 주요 장애 감소</li>
                 <li>관리자 데이터 관리 기능 정비로 운영 생산성 향상</li>
                 <li>비회원 로그인 기반 문의/조회 서비스 추가 및 UI/UX 개선</li>
